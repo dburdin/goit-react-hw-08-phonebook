@@ -36,7 +36,7 @@ export const Field = styled(FormikInput)`
 export const SubmitButton = styled.button`
   width: 200px;
   height: 50px;
-  margin: 0 auto;
+  margin: 20px auto;
   background-color: transparent;
   border: none;
   cursor: pointer;

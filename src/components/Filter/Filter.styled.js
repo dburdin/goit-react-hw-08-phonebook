@@ -2,7 +2,7 @@ import styled from 'styled-components';
 export const FilterField = styled.input`
   width: 450px;
   height: 30px;
-  margin: 10px 0;
+  margin: 20px 0;
   outline: none;
   border: none;
   border-radius: 0;
