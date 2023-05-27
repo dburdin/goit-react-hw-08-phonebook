@@ -63,7 +63,11 @@ export const ContactForm = () => {
           <ErrorMessage
             name="name"
             component="div"
-            style={{ color: 'red', fontSize: '11px' }}
+            style={{
+              color: 'red',
+              fontSize: '11px',
+              textTransform: 'uppercase',
+            }}
           ></ErrorMessage>
         </FormLabel>
         <FormLabel htmlFor="number">
@@ -72,7 +76,11 @@ export const ContactForm = () => {
           <ErrorMessage
             name="number"
             component="div"
-            style={{ color: 'red', fontSize: '11px' }}
+            style={{
+              color: 'red',
+              fontSize: '11px',
+              textTransform: 'uppercase',
+            }}
           ></ErrorMessage>
         </FormLabel>
         <SubmitButton type="submit">Add Contact</SubmitButton>
