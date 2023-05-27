@@ -8,6 +8,7 @@ import { Filter } from 'components/Filter';
 import { Wrapper } from './PhoneBook.styled';
 import { fetchContacts } from 'redux/contacts/operations';
 import { selectIsLoading, selectError } from 'redux/selectors';
+import { Home } from 'pages/Home/Home';
 
 export const PhoneBook = () => {
   const dispatch = useDispatch();
@@ -19,13 +20,16 @@ export const PhoneBook = () => {
   }, [dispatch]);
 
   return (
-    <Wrapper>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      {isLoading && !error && <b>Request in progress...</b>}
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
-    </Wrapper>
+    <>
+      <Home></Home>
+      <Wrapper>
+        <h1>Phonebook</h1>
+        <ContactForm />
+        {isLoading && !error && <b>Request in progress...</b>}
+        <h2>Contacts</h2>
+        <Filter />
+        <ContactList />
+      </Wrapper>
+    </>
   );
 };

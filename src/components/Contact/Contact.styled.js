@@ -4,7 +4,10 @@ export const ListItem = styled.li`
   display: flex;
   gap: 5px;
   align-items: center;
+  font-size: 20px;
+  text-transform: capitalize;
 `;
+
 export const DeleteButton = styled.button`
   width: 70px;
   height: auto;
