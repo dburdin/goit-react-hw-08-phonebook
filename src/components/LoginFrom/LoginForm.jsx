@@ -42,7 +42,7 @@ export const LoginForm = () => {
             <Field
               id="email"
               type="email"
-              placeholder="myemail@gmail.com"
+              placeholder="Your Email"
               name="email"
             />
             <ErrorMessage
@@ -61,7 +61,7 @@ export const LoginForm = () => {
             <Field
               id="password"
               type="password"
-              placeholder="Your password (min 5 characters)"
+              placeholder="Your password"
               name="password"
             />
             <ErrorMessage

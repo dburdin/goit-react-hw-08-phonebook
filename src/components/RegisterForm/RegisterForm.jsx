@@ -59,7 +59,7 @@ export const RegisterForm = () => {
             <Field
               id="email"
               type="email"
-              placeholder="myemail@gmail.com"
+              placeholder="Your Email"
               name="email"
             />
             <ErrorMessage
