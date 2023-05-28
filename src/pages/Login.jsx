@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { LoginForm } from 'components/LoginFrom/LoginForm';
 import { useSelector } from 'react-redux';
 import { selectErrorUser, selectIsLoadingUser } from '../redux/auth/selectors';
