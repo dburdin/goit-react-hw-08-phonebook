@@ -78,7 +78,7 @@ export const RegisterForm = () => {
             <Field
               id="password"
               type="password"
-              placeholder="Your password (min 5 characters)"
+              placeholder="Your Password (min 5 characters)"
               name="password"
             />
             <ErrorMessage

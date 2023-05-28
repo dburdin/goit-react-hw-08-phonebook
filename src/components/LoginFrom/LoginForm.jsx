@@ -61,7 +61,7 @@ export const LoginForm = () => {
             <Field
               id="password"
               type="password"
-              placeholder="Your password"
+              placeholder="Your Password"
               name="password"
             />
             <ErrorMessage
