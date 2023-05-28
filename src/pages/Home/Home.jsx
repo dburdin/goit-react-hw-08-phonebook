@@ -1,9 +1,15 @@
+import { Helmet } from 'react-helmet';
 import { Container, Title } from './Home.styled';
 
-export const Home = () => {
+export default function Home() {
   return (
-    <Container>
-      <Title>Welcome to web-application</Title>
-    </Container>
+    <>
+      <Helmet>
+        <title>Home Page</title>
+      </Helmet>
+      <Container>
+        <Title>Welcome to web-application 💁‍♀️</Title>
+      </Container>
+    </>
   );
-};
+}

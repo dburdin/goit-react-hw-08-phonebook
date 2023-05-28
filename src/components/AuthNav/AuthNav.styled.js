@@ -1,24 +1,6 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const Header = styled.header`
-  padding: 10px;
-
-  height: 50px;
-  background: #a0d2eb;
-  color: #494d5f;
-`;
-
-export const LinkContainer = styled.div`
-  display: flex;
-`;
-
-export const NavBar = styled.nav`
-  height: inherit;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-`;
 export const NavigatonLink = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;
@@ -33,7 +15,6 @@ export const NavigatonLink = styled(NavLink)`
 
   padding: 5px;
 
-  font-weight: 400;
   color: #494d5f;
 
   text-align: center;
@@ -60,4 +41,9 @@ export const NavigatonLink = styled(NavLink)`
       width: 100%;
     }
   }
+`;
+export const AuthNavContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

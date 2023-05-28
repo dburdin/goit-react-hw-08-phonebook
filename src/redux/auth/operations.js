@@ -2,7 +2,7 @@ import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-hot-toast';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com/';
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 const setAuthHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -22,7 +22,8 @@ export const register = createAsyncThunk(
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
-        toast.error(`Something went wrong. Please check:${error.message}`)
+        console.log('error', error),
+        toast.error(`Something went wrong`)
       );
     }
   }
@@ -38,7 +39,9 @@ export const logIn = createAsyncThunk(
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(
-        toast.error(`Something went wrong. Please check:${error.message}`)
+        toast.error(
+          `Something went wrong. It appears that there is no registered user with that email.`
+        )
       );
     }
   }
@@ -51,9 +54,7 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
     clearAuthHeader();
     toast.success('We will miss you');
   } catch (error) {
-    return thunkAPI.rejectWithValue(
-      toast.error(`Something went wrong. Please check:${error.message}`)
-    );
+    return thunkAPI.rejectWithValue(toast.error(`Something went wrong`));
   }
 });
 
@@ -69,7 +70,7 @@ export const refreshUser = createAsyncThunk(
 
     try {
       setAuthHeader(persistedToken);
-      const response = await axios.get('/users/curren');
+      const response = await axios.get('/users/current');
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);

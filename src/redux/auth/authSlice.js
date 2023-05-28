@@ -16,6 +16,7 @@ const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
 };
+
 const handleLogin = (state, action) => {
   state.user = action.payload.user;
   state.token = action.payload.token;

@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
   border: solid 3px #eee;
   box-shadow: 5px 5px 15px 5px #eeeeee;
   color: #494d5f;
+  border-radius: 40px;
 
   background: linear-gradient(
     45deg,

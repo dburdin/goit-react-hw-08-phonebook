@@ -3,6 +3,7 @@ import { Form as FormikForm, Field as FormikInput } from 'formik';
 import styled from 'styled-components';
 
 export const Form = styled(FormikForm)`
+  margin: 0 auto;
   width: 450px;
   display: flex;
   flex-direction: column;
@@ -10,6 +11,7 @@ export const Form = styled(FormikForm)`
   gap: 15px;
   padding: 5px 5px;
   font-size: large;
+  color: #494d5f;
 `;
 
 export const FormLabel = styled.label`
