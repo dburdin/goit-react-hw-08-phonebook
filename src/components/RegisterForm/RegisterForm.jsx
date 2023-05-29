@@ -20,7 +20,7 @@ const initialValues = {
 
 const Schema = Yup.object().shape({
   name: Yup.string().min(6, 'Too Short!').max(20, 'Too Long!').required(),
-  password: Yup.string().min(5, 'Too Short!').required(),
+  password: Yup.string().min(7, 'Too Short!').required(),
   email: Yup.string().email().required(),
 });
 
@@ -78,7 +78,7 @@ export const RegisterForm = () => {
             <Field
               id="password"
               type="password"
-              placeholder="Your Password (min 5 characters)"
+              placeholder="Your Password (min 7 characters)"
               name="password"
             />
             <ErrorMessage
