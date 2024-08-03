@@ -22,8 +22,9 @@ export const FormLabel = styled.label`
 export const Field = styled(FormikInput)`
   height: 30px;
   outline: none;
+  padding: 10px;
   border: none;
-  border-radius: 0;
+  border-radius: 10px;
   font-size: medium;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
   background-color: #e5eaf5;
