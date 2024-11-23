@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Container, Title } from './Home.styled';
+import { Container, Title, SubTitle, NavigatonLink } from './Home.styled';
 
 export default function Home() {
   return (
@@ -9,6 +9,10 @@ export default function Home() {
       </Helmet>
       <Container>
         <Title>Welcome to web-application 💁‍♀️</Title>
+        <SubTitle>
+          COME ON! Don’t wait —
+          <NavigatonLink to="/register">register</NavigatonLink>now and join us!
+        </SubTitle>
       </Container>
     </>
   );

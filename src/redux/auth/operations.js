@@ -15,8 +15,6 @@ const clearAuthHeader = () => {
 export const register = createAsyncThunk(
   'auth/register',
   async (credentials, thunkAPI) => {
-    console.log(credentials);
-
     try {
       const response = await axios.post('/users/signup', credentials);
       setAuthHeader(response.data.token);
@@ -24,10 +22,13 @@ export const register = createAsyncThunk(
 
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(
-        console.log('error', error),
-        toast.error(`Something went wrong`)
-      );
+      if (error.response.data.keyValue.email) {
+        return thunkAPI.rejectWithValue(
+          toast.error('The email is already registred. Try another one!')
+        );
+      } else {
+        return thunkAPI.rejectWithValue(toast.error(`Something went wrong`));
+      }
     }
   }
 );
